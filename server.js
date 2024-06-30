@@ -65,7 +65,7 @@ app.post("/api", async (req, res) => {
       response_chat = response_chat.join(" \n");
     }
     console.log("POST RESPONSE SUCCESSFUL: ", response_chat);
-    res.send(response_chat);
+    res.json(response_chat);
   } catch (error) {
     console.log(error);
     res.status(500).send("Internal Server Error");
